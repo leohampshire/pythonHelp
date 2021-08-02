@@ -32,8 +32,6 @@ def getSoma(matriz, n, m):
         else:
             soma = soma + matriz[i][0] + matriz[i][m-1]
     
-    print ("Borda = %.2f" % soma)#- elemento central
+    print ("Borda = %.2f" % soma)
     
 main()
-
-#n=1, 3, 5, 7, 11, 13
