@@ -1,0 +1,46 @@
+def main():
+    matriz = getMatriz()
+    
+    print(matriz_triangular_superior(matriz))
+    print(matriz_triangular_inferior(matriz))
+
+
+def getMatriz():
+    n = int(input())
+    mat = []
+
+    for i in range (n):
+        linha = str(input()).split(" ")
+        linhaInt = []
+        for j in range (len(linha)):
+            linhaInt.append(float(linha[j]))
+
+        mat.append(linhaInt)
+
+    return mat
+
+def matriz_triangular_superior(matriz):
+    if len(matriz[0])!=len(matriz):
+        return False
+    superior_nao_nulo = False
+    for i in range(len(matriz)):
+        for j in range(len(matriz)):
+            
+            if i<j and matriz[i][j]!=0:
+                superior_nao_nulo='triangular superior'
+                
+    return superior_nao_nulo
+
+def matriz_triangular_inferior(matriz):
+    if len(matriz[0])!=len(matriz):
+        return False
+    inferior_nao_nulo = False
+    for i in range(len(matriz)):
+        for j in range(len(matriz)):
+            
+            if i>j and matriz[i][j]!=0:
+                inferior_nao_nulo='triangular inferior'
+                
+    return inferior_nao_nulo
+
+main()
