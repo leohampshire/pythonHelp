@@ -37,8 +37,7 @@ def getSoma(matriz):
     tam = len(matriz) - 1
     x = soma_diagonal1(matriz) + soma_diagonal2(matriz)
 
-    if (tam > 1):
-        x = x - matriz[tam//2][tam//2]
+    x = x - matriz[tam//2][tam//2]
     
     print ("X = %d" % x)#- elemento central
     

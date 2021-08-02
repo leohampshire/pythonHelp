@@ -2,14 +2,7 @@
 def main():
     matriz = getMatriz()
 
-    tam = len(matriz) - 1
-    x = soma_diagonal1(matriz) + soma_diagonal2(matriz)
-    print(tam)
-    if (tam > 1):
-        x = x - matriz[tam//2][tam//2]
-    
-    print ("X = %d" % x)#- elemento central
-    
+    getSoma(matriz)
 
 
 def getMatriz():
@@ -39,6 +32,15 @@ def soma_diagonal2(matriz):
     for i in range (0,M):
         soma = soma + matriz[i][M-i-1] 
     return soma
+
+def getSoma(matriz):
+    tam = len(matriz) - 1
+    x = soma_diagonal1(matriz) + soma_diagonal2(matriz)
+
+    if (tam > 1):
+        x = x - matriz[tam//2][tam//2]
+    
+    print ("X = %d" % x)#- elemento central
     
 main()
 
